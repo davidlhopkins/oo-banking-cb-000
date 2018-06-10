@@ -27,6 +27,7 @@ class Transfer
     if @status = "completed"
     receiver -= amount
     sender += amount
+    @status = "reveresed"
   end
 
 end
