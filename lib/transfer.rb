@@ -9,7 +9,7 @@ class Transfer
   end
 
   def valid?
-    sender.valid? & receiver.valid? == true ? true : false
+    sender.valid? && receiver.valid?
   end
 
   def execute_transaction
@@ -30,7 +30,7 @@ class Transfer
       @status = "reversed"
     else
       false
-  end
+    end
   end
 
 end
